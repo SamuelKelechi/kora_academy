@@ -1,0 +1,131 @@
+.FooterContainer{
+    width: 100%;
+    padding-top: 80px;
+    background-color: #023047;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FooterLogo{
+    color: #219ebc;
+    font-size: 18px;
+    font-weight: bold;
+    width: 90%;
+}
+
+.FooterContent{
+    width: 90%;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.LeftContent{
+    width: 280px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.MiddleContent{
+    width: 280px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.FooterBtnContain{
+    height: 110px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.FooterBtn{
+    width: 220px;
+    height: 40px;
+    background-color: #FB8500;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.FooterLine{
+    width: 100%;
+    border: 1px solid #487D96;
+}
+
+.FooterBottom{
+    width: 90%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.Img7{
+    width: 110px;
+    position: absolute;
+    right: 20px;
+    display: none;
+}
+
+.GmailHold{
+    display: flex;
+    align-items: center;
+}
+
+.GmailHold > img{
+    width: 25px;
+    margin-right: 5px;
+}
+
+.SocialLinks{
+    width: 115px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.SocialLinks > a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.Social{
+    width: 22px;
+}
+
+@media screen and (max-width: 650px){
+    .FooterContainer{
+        padding-top: 20px;
+    }
+    .FooterContent{
+        flex-direction: column;
+    }
+    .LeftContent{
+        width: 100%;
+    }
+    .MiddleContent{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .FooterBtnContain{
+        height: 80px;
+    }
+    .FooterBottom{
+        justify-content: center;
+    }
+    .Img7{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .FooterBottom{
+        font-size: 14px;
+    }
+}

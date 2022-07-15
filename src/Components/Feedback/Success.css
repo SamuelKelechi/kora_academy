@@ -1,0 +1,45 @@
+.ConTain{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.Page1LogoHold{
+    font-size: 20px;
+    color: #049EFF;
+    font-family: poppins;
+    font-weight: bold;
+    display: flex;
+    margin-bottom: 20px;
+    width: 250px;
+}
+
+.Logo{
+    height: 30px;
+    margin-right: 5px;
+}
+
+.SuccessWrapper{
+    height: 80vh;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImageSuccess{
+    height: 200px;
+    width: auto;
+}
+
+.Thanks{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.Application{
+    opacity: 0.8;
+}

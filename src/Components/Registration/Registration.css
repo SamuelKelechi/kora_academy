@@ -1,0 +1,176 @@
+.RegContainer{
+    width: 100%;
+    min-height: 80vh;
+    background-color: #023047;
+    color: white;
+    padding-bottom: 20px;
+}
+.HeroTop{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8ECAE6;
+    font-weight: 500;
+    color: black;
+}
+.FormContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.FormHolder{
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.ImgInput{
+    width: 120px;
+    height: 35px;
+    background-color: #FFB703;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Images{
+    display: none;
+}
+
+.AgeSelect{
+    width: 100%;
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+
+.LaptopSelect{
+    width: 100%;
+}
+
+.AgeHold{
+  margin-top: -3px;
+  font-weight: bold;
+}
+
+.AgeSelector{
+    margin-left: 10px;
+    margin-right: 3px;
+}
+
+.inputs{
+    width: 100%;
+    height: 35px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+.StackTitle{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.StackHolder{
+    padding: 20px;
+    width: 98.5%;
+    height: 140px;
+    background-color: white;
+    margin-top: 5px;
+    border-radius: 5px;
+    color: black;
+    font-weight: 500;
+}
+
+.StackSelector{
+    margin-right: 15px;
+    width: 20px;
+}
+
+.StackReason{
+    margin-top: 5px;
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.DownAgree{
+    width: 100%;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.DownAgree > span{
+    color: #E0A60B;
+    cursor: pointer;
+}
+
+.DownSubmit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Disable{
+    width: 200px;
+    height: 40px;
+    margin-top: 25px;
+    border-radius: 8px;
+}
+
+.Enable{
+    width: 200px;
+    height: 40px;
+    background-color: #FB8500;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 425px){
+    .HeroTop{
+        font-size: 11.5px;
+    }
+    .FormHolder{
+        width: 93%;
+    }
+    .DownAgree{
+        font-size: 13px;
+    }
+    .StackTitle{
+        font-size: 15px;
+    }
+    .Disable{
+        width: 100%;
+    }
+    .Enable{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 325px){
+    .AgeSelect{
+        font-size: 15px;
+    }
+    .DownAgree{
+        font-size: 11.5px;
+    }
+}
+

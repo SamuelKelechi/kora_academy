@@ -1,0 +1,84 @@
+.MissionCont{
+    width: 100%;
+    background-color: #023047;
+    padding: 30px 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Img6{
+    height: 450px;
+    width: 30%;
+    margin-bottom: -30px;
+}
+
+.MissionRight{
+    width: 60%;
+    color: white;
+}
+
+.MissionTitle{
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.MissionPara{
+    margin-top: 20px;
+}
+
+.MissionBtn{
+    width: 200px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    background-color: #FB8500;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.MissionTop{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.Bulb{
+    height: 80px;
+}
+
+.LinkR{
+    width: 200px;
+    display: flex;
+}
+
+@media screen and (max-width: 650px){
+    .MissionRight{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .LinkR{
+        width: 80%;
+    }
+    .MissionBtn{
+        width: 100%;
+    }
+    .Img6{
+        display: none;
+    }
+    .MissionPara{
+        width: 80%;
+    }
+    .MissionCont{
+        padding: 20px 0 20px 0;
+    }
+    .MissionTop{
+        width: 80%;
+    }
+    .MissionTop{
+        width: 80%;
+    }
+}
