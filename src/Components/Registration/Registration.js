@@ -29,20 +29,11 @@ function Registration() {
     const [stack, setStack] = useState('')
     const [whystack, setWhystack] = useState('')
     const [whyconsider, setWhyconsider] = useState('')
-    // const [createdAt, setCreatedAt] = useState(Timestamp.now().toDate(),)
 
     const [display, setDisplay] = useState(false)
     const [progress, setProgress] = useState(0)
 
     const navigate = useNavigate()
-
-    const handleImage = (e) => {
-        if(e.target.files.length !==0)
-        {
-            setAvatar(URL.createObjectURL(e.target.files[0]))
-        }
-        // setAvatar({avatar: e.target.files[0]})
-    }
 
     const toggleDisplay = () => {
         setDisplay(!display)
@@ -99,6 +90,13 @@ function Registration() {
         navigate('/success');
     }
 
+    
+    // const handleImage = (e) => {
+    //     const file = e.target.files[0]
+    //     const showFile = URL.createObjectURL(file)
+    //     setAvatar(showFile)
+    // }
+
   
 
   return (
@@ -123,7 +121,11 @@ function Registration() {
                         <input id='img' type='file' className='Images'
                                 required='required' 
                                 accept='image/*' 
-                                onChange={handleImage}
+                                onChange={(event) => {
+                                    // setAvatar(event.target.files[0])
+                                    setAvatar(URL.createObjectURL(event.target.files[0]))
+                                }}
+                                // onChange={handleImage}
                         />
                     </label>
 
@@ -210,21 +212,21 @@ function Registration() {
 
                     <div className='AgeSelect' onChange={(e) => {setAge(e.target.value)}}>
                         <span className='AgeHold'>Age : </span>
-                        <input className='AgeSelector' name='age' value='17-20' type="checkbox" required/> 17-20
-                        <input className='AgeSelector' name='age' value='21-25' type="checkbox"/> 21-25
-                        <input className='AgeSelector' name='age' value='26-30' type="checkbox"/> 26-30
-                        <input className='AgeSelector' name='age' value='31-35' type="checkbox"/> 31-35
+                        <input className='AgeSelector' name='age' value='17-20' type="radio" /> 17-20
+                        <input className='AgeSelector' name='age' value='21-25' type="radio"/> 21-25
+                        <input className='AgeSelector' name='age' value='26-30' type="radio"/> 26-30
+                        <input className='AgeSelector' name='age' value='31-35' type="radio"/> 31-35
                     </div>
 
                     <div className='LaptopSelect'  onChange={(e) => {setLaptop(e.target.value)}}>
                         <span className='AgeHold'>Do you have a Laptop? : </span>
-                        <input className='AgeSelector' name='laptop' value='Yes' type="checkbox" required/> Yes
-                        <input className='AgeSelector' name='laptop' value='No' type="checkbox"/> No
+                        <input className='AgeSelector' name='laptop' value='Yes' type="radio" /> Yes
+                        <input className='AgeSelector' name='laptop' value='No' type="radio"/> No
                     </div>
 
                     <div className='StackTitle'>What Stack are you interested in?</div>
                     <div className='StackHolder' onChange={(e) => {setStack(e.target.value)}}>
-                        <input className='StackSelector' name='stack' value='Backend Development' type='radio' required/> Backend Development
+                        <input className='StackSelector' name='stack' value='Backend Development' type='radio' /> Backend Development
                         <br/>
                         <br/>
                         <input className='StackSelector' name='stack' value='Frontend Development' type='radio'/> Frontend Development
