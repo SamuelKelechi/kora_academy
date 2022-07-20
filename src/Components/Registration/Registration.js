@@ -41,7 +41,7 @@ function Registration() {
 
     const CollectionRef = collection(db, "registration")
 
-    const cont =  e => {
+    const Submit =  e => {
         e.preventDefault();
         const storageRef = ref(storage, `/images/${Date.now()}${avatar.name}`);
         const uploadImage = uploadBytesResumable(storageRef, avatar)
@@ -91,11 +91,11 @@ function Registration() {
     }
 
     
-    // const handleImage = (e) => {
-    //     const file = e.target.files[0]
-    //     const showFile = URL.createObjectURL(file)
-    //     setAvatar(showFile)
-    // }
+    const handleImage = (e) => {
+        const file = e.target.files[0]
+        const showFile = URL.createObjectURL(file)
+        setAvatar(showFile)
+    }
 
   
 
@@ -106,7 +106,7 @@ function Registration() {
                 Registration for the Kora Academy cohort 1.0 is now open!
             </div> 
             <div className='FormContainer'>
-                <form className='FormHolder' onSubmit={cont}>
+                <form className='FormHolder' onSubmit={Submit}>
                     { 
                         ! avatar ? (
                             <PermIdentityOutlinedIcon style={{fontSize:'70px', color:'white', borderRadius:'50%', border:'3px solid white'}}/>
@@ -121,11 +121,11 @@ function Registration() {
                         <input id='img' type='file' className='Images'
                                 required='required' 
                                 accept='image/*' 
-                                onChange={(event) => {
-                                    // setAvatar(event.target.files[0])
-                                    setAvatar(URL.createObjectURL(event.target.files[0]))
-                                }}
-                                // onChange={handleImage}
+                                // onChange={(event) => {
+                                //     setAvatar(event.target.files[0])
+                                //     setAvatar(URL.createObjectURL(event.target.files[0]))
+                                // }}
+                                onChange={handleImage}
                         />
                     </label>
 
