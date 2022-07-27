@@ -23,7 +23,7 @@ function Footer() {
                     <h4>Get in touch</h4>
                     <p>+2348186793482</p>
                     <p>+2348137253138</p>
-                    <div className='GmailHold'><img src={Gmail} alt='gmail' /> kora.academy@gmail.com</div>
+                    <div className='GmailHold'><img src={Gmail} alt='gmail' /> kora.academyng@gmail.com</div>
                     <img className='Img7' src={Img7} alt='avatar' />
                 </div>
 
@@ -35,7 +35,7 @@ function Footer() {
                         <a href='' target='blank'><img src={Li} alt='li' className='Social'/></a>
                         <a href='' target='blank'><img src={In} alt='in' className='Social'/></a>
                     </div>
-                    @kora.academy
+                    @Kora.AcademyNg
                 </div>
 
                 <div className='FooterBtnContain'>

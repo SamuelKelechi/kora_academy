@@ -13,6 +13,7 @@ import Foot from './Foot';
 
 function Registration() {
     const [avatar, setAvatar] = useState('')
+    const [img, setImg] = useState('')
     const [firstname, setFirstname] = useState('')
     const [lastname, setLastname] = useState('')
     const [email, setEmail] = useState('')
@@ -94,7 +95,8 @@ function Registration() {
     const handleImage = (e) => {
         const file = e.target.files[0]
         const showFile = URL.createObjectURL(file)
-        setAvatar(showFile)
+        setAvatar(file)
+        setImg(showFile)
     }
 
   
@@ -108,13 +110,12 @@ function Registration() {
             <div className='FormContainer'>
                 <form className='FormHolder' onSubmit={Submit}>
                     { 
-                        ! avatar ? (
+                        ! img ? (
                             <PermIdentityOutlinedIcon style={{fontSize:'70px', color:'white', borderRadius:'50%', border:'3px solid white'}}/>
                     ):(
-                        <img  src={avatar} alt='profile' style={{height:'90px', width:'90px', borderRadius:'50%'}}/> 
+                        <img  src={img} alt='profile' style={{height:'90px', width:'90px', borderRadius:'50%'}}/> 
                     )
                     } 
-                    
 
                     <label htmlFor='img' className='ImgInput'>
                             Upload Photo

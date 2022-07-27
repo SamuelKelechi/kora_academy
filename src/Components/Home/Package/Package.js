@@ -47,7 +47,7 @@ function Package() {
                 bg='#fb8500'
                 title='Internship on Completion'
                 bd='2px solid #fb8500'
-                para='A paid internship placement awaits you on your successful completion of the intensive five months training'
+                para='A six months internship placement awaits you on your successful completion of the intensive five months training'
             />
             <Card 
                 icon={icon4}
