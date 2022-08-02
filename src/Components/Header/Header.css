@@ -12,15 +12,21 @@
 
 .HeaderWrapper{
     width: 90%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .HeaderLogo{
-    color: #219ebc;
-    font-size: 18px;
     font-weight: bold;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Logs{
+    height: 35px;
 }
 
 .Buttons{
@@ -57,7 +63,7 @@
     .HeaderContainer{
         height: 60px;
     }
-    .HeaderLogo{
-        font-size: 16px;
+    .Logs{
+        height: 30px;
     }
 }

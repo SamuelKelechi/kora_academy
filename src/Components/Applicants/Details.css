@@ -29,6 +29,9 @@
     width: 360px;
     text-align: left;
     margin-top: 10px;
+    border: 1px solid grey;
+    padding: 3px;
+    border-radius: 8px;
 }
 
 @media screen and (max-width: 425px){

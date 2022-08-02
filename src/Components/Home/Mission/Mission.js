@@ -20,10 +20,7 @@ function Mission() {
                     <img src={Bulb} alt='Bulb' className='Bulb'/>
                 </div>
                 <p className='MissionPara'>
-                We ensure to provide you with the best instructor to make your learning fun and impactful, we have hand selected out instructors that will deliver the best learning experience <br/>
-                'We believe in practical, and that is why we invest on it, you would learn better by doing it yourself, get ready! <br/>
-                A paid internship placement awaits you on your successful completion of the intensive five months training.
-                You will be assigned to a mentor who will guide you through your journey in Tech
+                    We aim to ensure that after the completion of the academic programme, the graduates are fully equipped with knowledge required to solve real-world problems and for their future careers.
                 </p>
                 <Link to='/registration' className='LinkR' style={{textDecoration:'none', color:'inherit'}}><button className='MissionBtn'>Join cohort 1.0</button></Link>
             </div>

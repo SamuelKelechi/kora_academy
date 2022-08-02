@@ -8,6 +8,8 @@ import {getDownloadURL, ref, uploadBytesResumable} from 'firebase/storage';
 import { storage, db } from '../../Base';
 import { toast } from 'react-toastify';
 import Foot from './Foot';
+import swal from 'sweetalert'
+import Dots from '../Images/dots.png'
 
 
 
@@ -79,16 +81,21 @@ function Registration() {
                 createdAt:Timestamp.now().toDate(),
                 })
                 .then(() => {
-                    toast("Submitted Successfully", {type: "success"});
-                    setProgress(0);
+                    console.log('Submitted')
                 })
                 .catch(err=>{
-                    toast("Error occur while submitting", {type: "error"});
+                    console.log(err)
                 })
             });
         }
         )
-        navigate('/success');
+        navigate( '/', swal({
+            title: "Submitted",
+            text: "Your application has been submitted successfully!",
+            icon: "success",
+            button: "Ok",
+          })
+          ) 
     }
 
     
@@ -108,24 +115,25 @@ function Registration() {
                 Registration for the Kora Academy cohort 1.0 is now open!
             </div> 
             <div className='FormContainer'>
+                
                 <form className='FormHolder' onSubmit={Submit}>
+                    
                     { 
                         ! img ? (
+                           <>
+                            <img src={Dots} alt='dot' width='10px' style={{marginLeft:'-80px', marginBottom:'-10px'}}/> 
                             <PermIdentityOutlinedIcon style={{fontSize:'70px', color:'white', borderRadius:'50%', border:'3px solid white'}}/>
+                           </>
                     ):(
                         <img  src={img} alt='profile' style={{height:'90px', width:'90px', borderRadius:'50%'}}/> 
                     )
                     } 
 
                     <label htmlFor='img' className='ImgInput'>
-                            Upload Photo
+                            Select Photo
                         <input id='img' type='file' className='Images'
                                 required='required' 
                                 accept='image/*' 
-                                // onChange={(event) => {
-                                //     setAvatar(event.target.files[0])
-                                //     setAvatar(URL.createObjectURL(event.target.files[0]))
-                                // }}
                                 onChange={handleImage}
                         />
                     </label>
@@ -233,7 +241,10 @@ function Registration() {
                         <input className='StackSelector' name='stack' value='Frontend Development' type='radio'/> Frontend Development
                         <br/>
                         <br/>
-                        <input  className='StackSelector' name='stack' value='Product Design' type='radio'/> Product Design
+                        <input className='StackSelector' value='Frontend Development' type='radio' disabled /> <span style={{opacity:'0.5'}}>DevOps Engineering (N/A)</span>
+                        <br/>
+                        <br/>
+                        <input className='StackSelector' value='Product Design' type='radio' disabled /> <span style={{opacity:'0.5'}}>Product Design (N/A)</span>
                     </div>
 
                     <div className='StackTitle'>Why are you interested in the Stack?</div>
@@ -263,21 +274,25 @@ function Registration() {
 
                     <div className='DownSubmit'>
                         {
-                         !display ? (
+                         ! display ? (
                                 <button className='Disable' disabled>
                                     SUBMIT
                                 </button>
                         ) :  (
-                                <input className='Enable'
-                                type='submit' 
-                                />
+                                <>
+                                    {!avatar ? (
+                                                    <p style={{color:'red'}}>Please, select an image to Register</p>
+                                                ):( 
+                                                    <input className='Enable'
+                                                        type='submit'
+                                                        disabled={!avatar}
+                                                    />
+                                    )}
+                                </>        
                         )  
                         }
                     </div>
-
-
                 </form>
-
             </div>
         </section>
         <Foot />
