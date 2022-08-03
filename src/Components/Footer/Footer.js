@@ -31,10 +31,10 @@ function Footer() {
                 <div className='MiddleContent'>
                     <h4>Social Media</h4>
                     <div className='SocialLinks'>
-                        <a href='' target='blank'><img src={Fa} alt='fa' className='Social'/></a>
-                        <a href='' target='blank'><img src={Tw} alt='tw' className='Social'/></a>
-                        <a href='' target='blank'><img src={Li} alt='li' className='Social'/></a>
-                        <a href='' target='blank'><img src={In} alt='in' className='Social'/></a>
+                        <a href='https://facebook.com/kora.AcademyNg' target='blank'><img src={Fa} alt='fa' className='Social'/></a>
+                        <a href='https://twitter.com/KoraAcademyng' target='blank'><img src={Tw} alt='tw' className='Social'/></a>
+                        <a href='https://www.linkedin.com/company/kora-academyng/' target='blank'><img src={Li} alt='li' className='Social'/></a>
+                        <a href='https://www.instagram.com/kora.academyng' target='blank'><img src={In} alt='in' className='Social'/></a>
                     </div>
                     @kora.academyng
                 </div>

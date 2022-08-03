@@ -20,7 +20,10 @@ function Mission() {
                     <img src={Bulb} alt='Bulb' className='Bulb'/>
                 </div>
                 <p className='MissionPara'>
-                    We aim to ensure that after the completion of the academic programme, the graduates are fully equipped with knowledge required to solve real-world problems and for their future careers.
+                    To equip students with a strong foundation in IT related field to solve real-world problems and 
+                    <br/>
+                    <br/>
+                    At Kora Academy we ensure that after the completion of 5 months intensive training and six months internship, the graduates are fully equipped with knowledge required for their future careers.
                 </p>
                 <Link to='/registration' className='LinkR' style={{textDecoration:'none', color:'inherit'}}><button className='MissionBtn'>Join cohort 1.0</button></Link>
             </div>
